@@ -7,7 +7,11 @@
     "build": "node ./node_modules/webpack/bin/webpack.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valera-rozuvan/jest-expect-standalone.git"
+  },
+  "author": "Valera Rozuvan",
   "license": "MIT",
   "devDependencies": {
     "babel-loader": "^7.1.2",
@@ -15,5 +19,6 @@
     "jest": "^22.1.4",
     "node-loader": "^0.6.0",
     "webpack": "^3.10.0"
-  }
+  },
+  "homepage": "https://github.com/valera-rozuvan/jest-expect-standalone"
 }
