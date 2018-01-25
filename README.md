@@ -40,8 +40,10 @@ Include `jest-expect-standalone` as a script tag, and you will have the library
 available via `window.expect`.
 
 ```
-<script src="http://unpkg.com/jest-expect-standalone@latest/dist/expect.min.js"></script>
+<script src="https://unpkg.com/jest-expect-standalone@latest/dist/expect.min.js"></script>
 ```
+
+See sample JS Bin [jsbin/wapokahaxe](https://jsbin.com/wapokahaxe/edit?html,console).
 
 ## License
 
