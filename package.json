@@ -1,6 +1,6 @@
 {
   "name": "jest-expect-standalone",
-  "version": "22.1.0",
+  "version": "0.0.1",
   "description": "Jest Expect Standalone Library",
   "main": "index.js",
   "scripts": {
