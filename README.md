@@ -1,2 +1,4 @@
-# jest-expect-standalone
-Jest Expect Standalone Library
+# Jest Expect Standalone
+
+Jest Expect Standalone Library.
+
