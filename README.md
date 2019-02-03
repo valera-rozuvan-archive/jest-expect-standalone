@@ -45,6 +45,39 @@ available via `window.expect`.
 
 See sample JS Bin [jsbin/wapokahaxe](https://jsbin.com/wapokahaxe/edit?html,console).
 
+Or copy and paste the following HTML code in your editor, and hack away:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Running jest-expect-standalone</title>
+  <script src="https://unpkg.com/jest-expect-standalone@latest/dist/expect.min.js"></script>
+  <script>
+    try {
+      window.expect(true).toEqual(false);
+      console.log('Test #1 passed!');
+    } catch (err) {
+      console.log(err);
+      console.log('Test #1 failed!');
+    }
+    try {
+      window.expect(2).toEqual(2);
+      console.log('Test #2 passed!');
+    } catch (err) {
+      console.log(err);
+      console.log('Test #2 failed!');
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html>
+```
+
 ## License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for
