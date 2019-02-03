@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "strict": true,
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true,
+    "lib" : ["es5", "es2015", "es2015.iterable", "dom", "scripthost"],
+    "typeRoots": [ "node_modules/@types", "./typings.d.ts" ]
+  },
+  "exclude": [
+    "node_modules",
+    "vendor"
+  ]
+}
