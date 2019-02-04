@@ -40,12 +40,18 @@ Include `jest-expect-standalone` as a script tag, and you will have the library
 available via `window.expect`.
 
 ```
+<script src="https://cdn.jsdelivr.net/npm/jest-expect-standalone@latest/dist/expect.min.js"></script>
+```
+
+Alternatively, you can use the `unpkg` CDN:
+
+```
 <script src="https://unpkg.com/jest-expect-standalone@latest/dist/expect.min.js"></script>
 ```
 
 See sample JS Bin [https://jsbin.com/tetujatajo/1/](https://jsbin.com/tetujatajo/1/edit?html,console).
 
-Or copy and paste the following HTML code in your editor, and hack away:
+Or, copy and paste the following HTML code in your editor, and hack away:
 
 ```
 <!DOCTYPE html>
@@ -105,6 +111,11 @@ After installing NPM modules with `npm install`, you have the following commands
 npm run build
 npm run test
 ```
+
+The `jest/expect` sources and generated build files are located in the directory `vendor/expect`
+in the current project. To update this directory, get `https://github.com/facebook/jest` sources,
+and build that library. Then copy the `packages/expect` folder into to this project as
+`vendor/expect`.
 
 ## License
 
