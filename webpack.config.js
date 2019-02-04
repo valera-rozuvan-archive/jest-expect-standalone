@@ -63,7 +63,12 @@ module.exports = (env, argv) => {
         new UglifyJsPlugin({
           cache: true,
           parallel: true,
-          sourceMap: false
+          sourceMap: false,
+          uglifyOptions: {
+            output: {
+              comments: false,
+            },
+          }
         })
       ]
     };

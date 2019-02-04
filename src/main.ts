@@ -1,4 +1,4 @@
-import { expect } from '../vendor/expect/build-es5/index.js';
+import * as expect from '../vendor/expect/build-es5/index.js';
 import * as expectPackageJson from '../vendor/expect/package.json';
 
 interface ICustomWidnow extends Window {
@@ -7,7 +7,7 @@ interface ICustomWidnow extends Window {
 }
 
 (window as ICustomWidnow).__jest_expect_version = expectPackageJson.version;
-console.log('window.__jest_expect_version = ' + (window as ICustomWidnow).__jest_expect_version);
+console.log('jest/expect version ' + (window as ICustomWidnow).__jest_expect_version);
 (window as ICustomWidnow).expect = expect;
 
 export default expect;
