@@ -43,7 +43,7 @@ available via `window.expect`.
 <script src="https://unpkg.com/jest-expect-standalone@latest/dist/expect.min.js"></script>
 ```
 
-See sample JS Bin [jsbin/wapokahaxe](https://jsbin.com/wapokahaxe/edit?html,console).
+See sample JS Bin [https://jsbin.com/tetujatajo/1/](https://jsbin.com/tetujatajo/1/edit?html,console).
 
 Or copy and paste the following HTML code in your editor, and hack away:
 
@@ -54,27 +54,45 @@ Or copy and paste the following HTML code in your editor, and hack away:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Running jest-expect-standalone</title>
-  <script src="https://unpkg.com/jest-expect-standalone@latest/dist/expect.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/jest-expect-standalone@latest/dist/expect.min.js">
+  </script>
   <script>
-    try {
-      expect(true).toEqual(false);
-      console.log('Test #1 passed!');
-    } catch (err) {
-      console.log(err);
-      console.log('Test #1 failed!');
+    function domReady(f) {
+      (/in/.test(document.readyState)) ?
+        setTimeout(function () { this.domReady(f); }, 9) :
+        f();
     }
-    try {
-      expect(2).toEqual(2);
-      console.log('Test #2 passed!');
-    } catch (err) {
-      console.log(err);
-      console.log('Test #2 failed!');
+
+    function runTests() {
+      console.log('-----------------------------------');
+
+      try {
+        expect(true).toEqual(false);
+        console.log('Test #1 passed!');
+      } catch (err) {
+        console.log('Test #1 failed!');
+        console.log(err.message);
+      }
+
+      console.log('-----------------------------------');
+
+      try {
+        expect(2).toEqual(2);
+        console.log('Test #2 passed!');
+      } catch (err) {
+        console.log('Test #2 failed!');
+        console.log(err.message);
+      }
+      
+      console.log('-----------------------------------');
     }
+    
+    domReady(runTests);
   </script>
 </head>
-<body>
-
-</body>
+<body></body>
 </html>
 ```
 
